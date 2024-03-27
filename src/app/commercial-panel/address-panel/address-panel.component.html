@@ -1,8 +1,130 @@
 <mat-expansion-panel>
+
     <mat-expansion-panel-header>
         <mat-panel-title>
             Address
         </mat-panel-title>
     </mat-expansion-panel-header>
-    
+
+    <form (ngSubmit)="submitAddressData()">
+
+        <div class="form-row">
+            <mat-form-field appearance="fill">
+                <mat-label>A/c No.</mat-label>
+                <input matInput [(ngModel)]="addressData.accountNumber" id="accountNumberAR" name="accountNumberAR"
+                    placeholder="Type something...">
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Flag</mat-label>
+                <input matInput [(ngModel)]="addressData.flag" id="flagAR" name="flagAR"
+                    placeholder="Type something...">
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Segment Identifier</mat-label>
+                <mat-select [(ngModel)]="addressData.segmentIdentifier" id="segmentIdentifierAR"
+                    name="segmentIdentifierAR">
+                    <mat-option value="Test-1">Location Type 1</mat-option>
+                    <mat-option value="Test-2">Location Type 2</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Borrower Office Location Type</mat-label>
+                <mat-select [(ngModel)]="addressData.borrowerOfficeLocation" id="borrowerOfficeLocationAR"
+                    name="borrowerOfficeLocationAR">
+                    <mat-option value="Test-1">Location Type 1</mat-option>
+                    <mat-option value="Test-2">Location Type 2</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="form-row">
+            <mat-form-field appearance="fill">
+                <mat-label>Borrower Office DUNS Number</mat-label>
+                <input matInput [(ngModel)]="addressData.borrowerOfficeNumber" id="borrowerOfficeNumberAR"
+                    name="borrowerOfficeNumberAR" placeholder="Type something...">
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Address Line 1</mat-label>
+                <input matInput [(ngModel)]="addressData.addressLine1" id="addressLine1AR" name="addressLine1AR"
+                    placeholder="Type something...">
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Address Line 2</mat-label>
+                <input matInput [(ngModel)]="addressData.addressLine2" id="addressLine2AR" name="addressLine2"
+                    placeholder="Type something...">
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Address Line 3</mat-label>
+                <input matInput [(ngModel)]="addressData.addressLine3" id="addressLine3AR" name="addressLine3"
+                    placeholder="Type something...">
+            </mat-form-field>
+        </div>
+        <div class="form-row">
+            <mat-form-field appearance="fill">
+                <mat-label>City / Town</mat-label>
+                <input matInput [(ngModel)]="addressData.city" id="cityAR" name="cityAR"
+                    placeholder="Type something...">
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>District</mat-label>
+                <input matInput [(ngModel)]="addressData.district" id="districtAR" name="districtAR"
+                    placeholder="Type something...">
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>State / Union territory</mat-label>
+                <input matInput [(ngModel)]="addressData.state" id="stateAR" name="stateAR"
+                    placeholder="Type something...">
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Pin Code</mat-label>
+                <input matInput [(ngModel)]="addressData.pinCode" id="pinCodeAR" name="pinCodeAR"
+                    placeholder="Type something...">
+            </mat-form-field>
+        </div>
+        <div class="form-row">
+            <mat-form-field appearance="fill">
+                <mat-label>Country</mat-label>
+                <mat-select [(ngModel)]="addressData.country" id="countryAR" name="countryAR">
+                    <mat-option value="India">India</mat-option>
+                    <mat-option value="America">America</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Mobile Number(s)</mat-label>
+                <input matInput [(ngModel)]="addressData.mobileNumber" id="mobileNumberAR" name="mobileNumberAR"
+                    placeholder="Type something...">
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Telephone Area Code</mat-label>
+                <input matInput [(ngModel)]="addressData.telephoneAreaCode" id="telephoneAreaCodeAR"
+                    name="telephoneAreaCodeAR" placeholder="Type something...">
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Telephone Number(s)</mat-label>
+                <input matInput [(ngModel)]="addressData.telephoneNumber" id="telephoneNumberAR"
+                    name="telephoneNumberAR" placeholder="Type something...">
+            </mat-form-field>
+        </div>
+        <div class="form-row">
+            <mat-form-field appearance="fill">
+                <mat-label>Fax Area Code</mat-label>
+                <input matInput [(ngModel)]="addressData.faxAreaCode" id="faxAreaCodeAR" name="faxAreaCodeAR"
+                    placeholder="Type something...">
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Fax Number(s)</mat-label>
+                <input matInput [(ngModel)]="addressData.faxNumber" id="faxNumberAR" name="faxNumberAR"
+                    placeholder="Type something...">
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Filler</mat-label>
+                <input matInput [(ngModel)]="addressData.filler" id="fillerAR" name="fillerAR"
+                    placeholder="Type something...">
+            </mat-form-field>
+        </div>
+
+        <!-- Save Button -->
+        <div class="form-row">
+            <button mat-raised-button color="primary" type="submit">Save</button>
+        </div>
+    </form>
 </mat-expansion-panel>

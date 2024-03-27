@@ -4,5 +4,57 @@
             Header
         </mat-panel-title>
     </mat-expansion-panel-header>
-    <p>Panel 2 Content</p>
+    <form (ngSubmit)="submitheaderData()">
+        <div class="form-row">
+            <mat-form-field appearance="fill">
+                <mat-label>Segment Identifier</mat-label>
+                <mat-select [(ngModel)]="headerData.segmentIdentifier" id="segmentidentifierHR"
+                    name="segmentidentifierHR">
+                    <mat-option value="Test-1">Option 1</mat-option>
+                    <mat-option value="Test-2">Option 2</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Member ID</mat-label>
+                <input matInput [(ngModel)]="headerData.memberID " id="memberidHR" name="memberidHR"
+                    placeholder="Enter Account Number">
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Previous Member ID</mat-label>
+                <input matInput [(ngModel)]="headerData.previousMemberID " id="previousmemberidHR"
+                    name="previousmemberidHR" placeholder="Enter Account Number">
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Created Date</mat-label>
+                <input matInput [matDatepicker]="DateofcreationHR" [(ngModel)]="headerData.createdOn"
+                    name="DateofcreationHR" id="DateofcreationHR" placeholder="Pick a date">
+                <mat-datepicker-toggle matSuffix [for]="DateofcreationHR"></mat-datepicker-toggle>
+                <mat-datepicker #DateofcreationHR></mat-datepicker>
+            </mat-form-field>
+        </div>
+
+        <div class="form-row">
+            <mat-form-field appearance="fill">
+                <mat-label>Reporting Cycle Date</mat-label>
+                <input matInput [matDatepicker]="DateofreportingHR" [(ngModel)]="headerData.reportingCycleDate"
+                    name="DateofreportingHR" id="DateofreportingHR" placeholder="Pick a date">
+                <mat-datepicker-toggle matSuffix [for]="DateofreportingHR"></mat-datepicker-toggle>
+                <mat-datepicker #DateofreportingHR></mat-datepicker>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Information Type</mat-label>
+                <input matInput [(ngModel)]="headerData.informationType " id="informationtypeHR"
+                    name="informationtypeHR" placeholder="Enter Account Number">
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Filler</mat-label>
+                <input matInput [(ngModel)]="headerData.filler " id="fillerHR" name="fillerHR"
+                    placeholder="Enter Account Number">
+            </mat-form-field>
+
+        </div>
+    </form>
 </mat-expansion-panel>

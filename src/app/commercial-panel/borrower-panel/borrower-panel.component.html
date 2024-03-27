@@ -6,7 +6,7 @@
     </mat-expansion-panel-header>
     <form (ngSubmit)="submitborrowerData()">
 
-        <div class="form-row">
+        <!-- <div class="form-row">
             <mat-form-field appearance="fill">
                 <mat-label>Account Number</mat-label>
                 <input matInput [(ngModel)]="borrowerData.accountnumber " name="accountnumber_borrower"
@@ -19,9 +19,9 @@
             <mat-form-field appearance="fill">
                 <mat-label>Segment Identifier</mat-label>
                 <mat-select [(ngModel)]="borrowerData.segmentidentifier" id="segmentidentifierBR"
-                    name="segmentidentifierBR">
-                    <mat-option value="Test-1">Option 1</mat-option>
-                    <mat-option value="Test-2">Option 2</mat-option>
+                    name="segmentidentifierBR" aria-labelledby="segmentIdentifierLabel">
+                    <mat-option value="0">--Select Segment Identifier--</mat-option>
+                    <mat-option value="1">Segment 1</mat-option>
                 </mat-select>
             </mat-form-field>
             <mat-form-field appearance="fill">
@@ -29,7 +29,7 @@
                 <input matInput [(ngModel)]="borrowerData.memberbranchcode" name="memberbranchcode_borrower"
                     placeholder="Enter Member Branch Code">
             </mat-form-field>
-        </div>
+        </div> -->
 
     </form>
 </mat-expansion-panel>
