@@ -1,0 +1,11 @@
+:host {
+    display: block;
+    padding-top: 64px;
+    /* Header height */
+    padding-bottom: 40px;
+    /* Footer height */
+}
+
+.main-content {
+    padding: 20px;
+}

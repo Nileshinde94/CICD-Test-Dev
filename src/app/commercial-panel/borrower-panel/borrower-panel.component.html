@@ -1,0 +1,35 @@
+<mat-expansion-panel>
+    <mat-expansion-panel-header>
+        <mat-panel-title>
+            Borrower
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    <form (ngSubmit)="submitborrowerData()">
+
+        <div class="form-row">
+            <mat-form-field appearance="fill">
+                <mat-label>Account Number</mat-label>
+                <input matInput [(ngModel)]="borrowerData.accountnumber " name="accountnumber_borrower"
+                    placeholder="Enter Account Number">
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Flag</mat-label>
+                <input matInput [(ngModel)]="borrowerData.flag" name="flag_borrower" placeholder="Enter Flag">
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Segment Identifier</mat-label>
+                <mat-select [(ngModel)]="borrowerData.segmentidentifier" id="segmentidentifierBR"
+                    name="segmentidentifierBR">
+                    <mat-option value="Test-1">Option 1</mat-option>
+                    <mat-option value="Test-2">Option 2</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Member Branch Code</mat-label>
+                <input matInput [(ngModel)]="borrowerData.memberbranchcode" name="memberbranchcode_borrower"
+                    placeholder="Enter Member Branch Code">
+            </mat-form-field>
+        </div>
+
+    </form>
+</mat-expansion-panel>
